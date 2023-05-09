@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: black;
+    color: #FAFAFA;
+    padding: 10px 20px;
+    display: flex;
+    font-family: 'Abhaya Libre ExtraBold';
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    align-items: center;
+    align-content: center;
+    height: 90px;
+    font-size: 150%;
+}
+
+nav>h1 {
+    text-align: center;
+    width: 70%;
+}
+
+nav li {
+    text-decoration: none;
+    align-items: center;
+    justify-content: space-around;
+    /* border: 1px solid white; */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 10px;
+    gap: 10px;
+    letter-spacing: 2px;
+    /* border: 1px solid white; */
+}
+
+.principal {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Ruda';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: 0.1em;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0.24%, rgba(39, 39, 39, 0.1) 0.25%, rgba(0, 0, 0, 0.13) 13.26%, #000000 100.24%);
+}
+
+.annonce {
+    padding: 1em;
+    text-align: center;
+}
+
+.contact {
+    text-align: center;
+}
+
+div>h2 {
+    background-color: #000000;
+    color: #FAFAFA;
+    padding: 0.2em;
+    margin-top: 1em;
+    text-align: center;
+}
+
+.pizza {
+    display: flex;
+    padding: 1em;
+    color: #F2C94C;
+    /* text-align: left; */
+}
+
+.photoPizza {
+    width: 180px;
+    height: 130px;
+    max-width: 200px;
+    max-height: 150px;
+    border-radius: 10px;
+}
+
+.textPizza {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1em;
+    width: 40em;
+}
+
+span {
+    text-align: right;
+}
+
+.prix {
+    text-align: right;
+    margin-left: 10px;
+}
+
+.ingredients {
+    color: #ffffff;
+    /* text-align: right; */
+}
+
+.nomPrix {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* p {
+    /* border: 1px solid white; */
+/* } */
+
+@media screen and (max-width:768px) {
+    body {
+        background-color: red;
+    }
+
+    p {
+        font-size: 21px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+}
