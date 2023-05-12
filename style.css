@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-nav {
+header {
     background-color: black;
     color: #FAFAFA;
     padding: 10px 20px;
@@ -14,31 +14,74 @@ nav {
     font-weight: 700;
     line-height: 40px;
     align-items: center;
-    align-content: center;
+    justify-content: space-between;
     height: 90px;
     font-size: 150%;
 }
 
-nav>h1 {
+header>h1 {
     text-align: center;
     width: 70%;
 }
 
+#menu-header {
+    background-color: #000000;
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    display: none;
+}
+
+#menu-open {
+    /* margin-left: -100%; */
+}
+
+#menu-close {
+    /* border: 1px solid white; */
+    display: none;
+    /* margin-left: -100%; */
+}
+
+.burger {
+    background-color: transparent;
+    border: 0;
+    width: 50px;
+    align-items: right;
+    /* border: 1px solid white; */
+}
+
+.line {
+    margin-top: 2px;
+    background-color: white;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    padding: 2px;
+    border: 1px solid white;
+    display: block;
+}
+
 nav li {
-    text-decoration: none;
+    list-style: none;
     align-items: center;
     justify-content: space-around;
+    border-radius: 10px;
+    padding: 0 5px;
     /* border: 1px solid white; */
+}
+
+nav li:hover {
+    background-color: grey;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    flex-direction: row;
-    width: 30%;
-    align-items: center;
+    flex-direction: column;
+    /* width: 30%; */
+    align-items: right;
     justify-content: space-around;
-    padding: 10px 10px;
+    padding: 5px 5px;
     gap: 10px;
     letter-spacing: 2px;
     /* border: 1px solid white; */
@@ -95,10 +138,6 @@ div>h2 {
     width: 40em;
 }
 
-span {
-    text-align: right;
-}
-
 .prix {
     text-align: right;
     margin-left: 10px;
@@ -114,11 +153,7 @@ span {
     justify-content: space-between;
 }
 
-/* p {
-    /* border: 1px solid white; */
-/* } */
-
-@media screen and (max-width:768px) {
+@media screen and (min-width:768px) {
     body {
         background-color: red;
     }
@@ -128,6 +163,20 @@ span {
     }
 
     nav ul {
-        flex-direction: column;
+        flex-direction: row;
+    }
+
+    #menu-header {
+        display: flex !important;
+        position: relative !important;
+        top: 0;
+    }
+
+    #menu-open {
+        display: none !important;
+    }
+
+    #menu-close {
+        display: none !important;
     }
 }

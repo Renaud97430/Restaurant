@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,16 +7,40 @@
     <title>Restaurant</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<script>
+    function ouvrir_menu() {
+      document.getElementById("menu-header").style.display =
+        "flex";
+      document.getElementById("menu-close").style.display = "inline";
+      document.getElementById("menu-open").style.display = "none";
+    }
+
+    function fermer_menu() {
+      document.getElementById("menu-header").style.display =
+        "none";
+      document.getElementById("menu-close").style.display = "none";
+      document.getElementById("menu-open").style.display = "block";
+    }
+  </script>
+  
 <body>
     <header>
-        <nav>
             <h1>Pizzeria DI MURO</h1>
-            <ul>
-            <li>Menu</li>
-            <li>Contact</li>
-            </ul>
-        </nav>
+                <button class="burger" id="menu-open" onclick="ouvrir_menu()" >
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                </button>
+            <nav id="menu-header">
+                <ul >
+                    <li>Menu</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+            <p class="menu-close" id="menu-close" onclick="fermer_menu()">
+                <a href="#">X</a></p>
     </header>
+        
       <div class="principal">
             <p class="annonce">Toutes nos pizzas sont réalisées avec passion par des italiens et avec des produits frais</p>
             <img class="img-principale" src="pizza-principale.png" alt="pizza-acceuil">
